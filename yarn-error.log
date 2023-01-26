@@ -1,0 +1,30 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add esbuild
+
+PATH: 
+  /home/gust/.rvm/gems/ruby-3.1.1/bin:/home/gust/.rbenv/versions/3.1.1/bin:/home/gust/.rbenv/libexec:/home/gust/.rbenv/plugins/ruby-build/bin:/home/gust/.rvm/gems/ruby-3.1.1@global/bin:/home/gust/.rvm/rubies/ruby-3.1.1/bin:/home/gust/.rvm/bin:/home/gust/.rbenv/shims:/home/gust/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/MinGW/bin:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/nodejs:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Carva/AppData/Local/Programs/Python/Python310/Scripts:/mnt/c/Users/Carva/AppData/Local/Programs/Python/Python310:/mnt/c/Users/Carva/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Carva/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Carva/.dotnet/tools:/mnt/c/Users/Carva/AppData/Roaming/npm:/snap/bin:/usr/local/go/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  12.22.12
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
+
+npm manifest: 
+  {
+    "name": "app",
+    "private": "true"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
