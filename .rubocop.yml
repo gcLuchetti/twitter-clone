@@ -2,3 +2,5 @@ AllCops:
   Excludes:
     - script/**
     - bin/**
+Documentation:
+  Enabled: false
