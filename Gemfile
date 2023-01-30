@@ -66,5 +66,6 @@ group :development do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 6.0.0'
   gem 'rubocop', require: true
+  gem 'solargraph'
   gem 'web-console'
 end
