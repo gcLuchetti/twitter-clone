@@ -3,5 +3,4 @@ externals: {
   "@hotwired/turbo-rails"
 }
 import "./controllers"
-import {} from 'jquery-ujs'
 import * as bootstrap from "bootstrap"
