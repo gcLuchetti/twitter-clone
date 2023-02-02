@@ -5,6 +5,8 @@ AllCops:
     - bin/**
     - config/initializers/**
     - config/environments/**
+    - db/**/**
+    - spec/factories/**
 Documentation:
   Enabled: false
 Gemspec/DeprecatedAttributeAssignment: # new in 1.30
