@@ -8,6 +8,8 @@ ruby '3.1.1'
 # https://github.com/heartcombo/devise
 gem 'devise'
 
+gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'main'
+
 # https://github.com/rails/jquery-ujs
 gem 'jquery-rails'
 
@@ -68,7 +70,6 @@ end
 group :development do
   gem 'brakeman'
   gem 'factory_bot_rails'
-  gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'main'
   gem 'letter_opener'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 6.0.0'
