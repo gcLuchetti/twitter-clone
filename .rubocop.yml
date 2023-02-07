@@ -97,6 +97,8 @@ Style/ComparableClamp: # new in 1.44
   Enabled: true
 Style/ConcatArrayLiterals: # new in 1.41
   Enabled: true
+Style/Documentation:
+  Enabled: false
 Style/DocumentDynamicEvalDefinition: # new in 1.1
   Enabled: true
 Style/EmptyHeredoc: # new in 1.32
