@@ -15,10 +15,12 @@ RSpec.describe User, type: :model do
       expect(user1).to be_valid
       user1.confirm
       expect(user1).to be_confirmed
+      expect(user1).to have_attributes(confirmed_at: (be_within(1.second).of Time.now))
     end
 
     it 'is valid and confirmed - with trait' do
       expect(user2).to be_valid.and be_confirmed
+      expect(user2).to have_attributes(confirmed_at: (be_within(1.second).of Time.now))
     end
   end
 
@@ -47,6 +49,7 @@ RSpec.describe User, type: :model do
 
     it 'is not confirmed' do
       expect(userunconfirmed).to_not be(userunconfirmed.confirmed?)
+      expect(userunconfirmed).to have_attributes(confirmed_at: nil)
     end
   end
 end
