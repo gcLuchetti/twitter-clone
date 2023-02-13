@@ -7,6 +7,8 @@ require_relative '../config/environment'
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
+require 'support/warden_helpers'
+require 'support/devise_helpers'
 require 'support/factory_bot'
 Dir[Rails.root.join('spec', 'factories', '**', '*.rb')].each { |file| require file }
 
