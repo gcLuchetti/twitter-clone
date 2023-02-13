@@ -1,0 +1,15 @@
+<h1>Logged in!</h1>
+  <%= button_to("Log Out", destroy_user_session_path, method: :delete, class: "btn btn-warning" ) %>
+
+  <%= form_with model: Tweet.new, url: tweets_path, local: true do |t| %>
+    <%= t.text_field :body %>
+    <%= t.submit %>
+  <% end %>
+
+  <ul>
+    <%= Tweet.find_each do |tweet| %>
+      <li>
+        <%= tweet.body %>
+      </li>
+    <% end %>
+</ul>
