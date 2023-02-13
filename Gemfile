@@ -67,6 +67,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'ruby-debug-ide', '~> 0.7.3'
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'simplecov', require: false
 end
 
 group :development do

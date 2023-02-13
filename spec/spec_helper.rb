@@ -15,6 +15,10 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+require 'simplecov'
+SimpleCov.start 'rails'
+
 RSpec.configure do |config|
   # Add some configurations
   config.formatter = :documentation
