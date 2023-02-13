@@ -16,7 +16,7 @@ RSpec.describe 'Dashboards', type: :request do
       end
 
       context 'when logged in' do
-        let(:user_confirmed) { create(:user, :confirme_user) }
+        let(:user_confirmed) { create(:user, :confirm_user) }
 
         subject(:get_dashboard) { get(dashboard_path) }
 
