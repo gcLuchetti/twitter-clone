@@ -19,16 +19,16 @@ RSpec.describe 'Tweets', type: :request do
 
       context 'when logged in' do
         let(:params) { { tweet: { body: 'blabla' } } }
-        let(:user_confirmed) { create(:user, :confirm_user) }
+        let(:user) { create(:user) }
 
         subject(:post_tweet) { post(tweets_path, params:) }
 
         before do
-          sign_in(user_confirmed)
+          sign_in(user)
         end
 
         it 'access the page' do
-          user_confirmed
+          user
           post_tweet
           expect(response).to have_http_status(:redirect)
             .and redirect_to(dashboard_path)

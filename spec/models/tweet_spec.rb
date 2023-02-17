@@ -20,9 +20,6 @@ RSpec.describe Tweet, type: :model do
   describe 'failure' do
     let(:user) { create(:user) }
 
-    it 'when more then 280 caracteres' do
-      t = Tweet.new
-      t.user = User.new
-    end
+    pending 'when more then 280 caracteres'
   end
 end

@@ -16,16 +16,16 @@ RSpec.describe 'Dashboards', type: :request do
       end
 
       context 'when logged in' do
-        let(:user_confirmed) { create(:user, :confirm_user) }
+        let(:user) { create(:user) }
 
         subject(:get_dashboard) { get(dashboard_path) }
 
         before do
-          sign_in(user_confirmed)
+          sign_in(user)
         end
 
         it 'access the page' do
-          user_confirmed
+          user
           get_dashboard
           expect(response).to have_http_status(:success)
         end
