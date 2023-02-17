@@ -4,6 +4,9 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Ignore environment variables
+.env
+
 # Ignore coverage files - SimpleCov
 coverage/**
 
@@ -11,7 +14,7 @@ coverage/**
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/log/*
+/log/*.log
 /tmp/*
 !/log/.keep
 !/tmp/.keep
