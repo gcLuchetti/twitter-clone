@@ -79,8 +79,11 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
 production:
   <<: *default
-  database: twitter_clone_production
-  username: twitter_clone
-  password: <%= ENV["TWITTER_CLONE_DATABASE_PASSWORD"] %>
+  database: DATABASE_NAME
+  username: DATABASE_USERNAME
+  password: DATABASE_PASSWORD
+  host: DATABASE_HOST
+  port: DATABASE_PORT

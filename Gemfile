@@ -74,6 +74,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman'
+  gem 'dockerfile-rails', '>= 1.0'
   gem 'factory_bot_rails'
   gem 'letter_opener'
   gem 'pry-rails'
