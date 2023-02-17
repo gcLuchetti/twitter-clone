@@ -32,4 +32,16 @@ RSpec.describe 'Dashboards', type: :request do
       end
     end
   end
+
+  describe '#after_sign_in_path_for' do
+    context 'when there is a stored location' do
+      # it 'returns the stored location' do
+      # end
+    end
+
+    context 'when there is no stored location' do
+      # it 'returns the dashboard path' do
+      # end
+    end
+  end
 end
