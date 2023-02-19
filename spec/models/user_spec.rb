@@ -13,6 +13,10 @@ RSpec.describe User, type: :model do
     it 'is valid' do
       expect(user1).to be_valid
     end
+
+    it 'should send an welcome email' do
+      expect { user1 }.to change { UserMailer.deliveries.count }.by(1)
+    end
   end
 
   describe 'failure' do
