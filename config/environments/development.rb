@@ -47,6 +47,9 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'dev.localhost', port: 3000 }
   config.action_mailer.perform_caching = false
 
+  # Send images through email delivery
+  config.action_mailer.asset_host = 'http://localhost:3000'
+
   # Development log_level :debug to see messages
   config.log_level = :debug
 
