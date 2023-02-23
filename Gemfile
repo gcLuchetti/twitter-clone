@@ -70,6 +70,10 @@ group :development, :test do
   gem 'simplecov', require: false
 end
 
+group :test do
+  gem 'database_cleaner-active_record'
+end
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
