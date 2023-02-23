@@ -10,6 +10,11 @@ RSpec.describe User, type: :model do
       should have_many(:tweets).dependent(:destroy)
     end
 
+    it 'should be unique username' do
+      user1
+      should validate_uniqueness_of(:username).case_insensitive.allow_blank
+    end
+
     it 'is valid' do
       expect(user1).to be_valid
     end
@@ -21,13 +26,20 @@ RSpec.describe User, type: :model do
 
   describe 'failure' do
     let(:userInvalidEmail) { create(:user, email: 'joe@gmail.com') }
+    let(:userInvalidUsername) { create(:user, username: 'test-without-variation') }
     let(:userSmallPassword) { create(:user, password: 123) }
     let(:userWithoutPassword) { create(:user, password: nil) }
     let(:userWithoutEmail) { create(:user, email: nil) }
     let(:userunconfirmed) { create(:user) }
 
     it 'has a unique email' do
+      create(:user, email: 'joe@gmail.com')
       expect { userInvalidEmail }.to raise_error(ActiveRecord::RecordInvalid)
+    end
+
+    it 'has a unique username' do
+      create(:user, username: 'test-without-variation')
+      expect { userInvalidUsername }.to raise_error(ActiveRecord::RecordInvalid)
     end
 
     it 'is not valid with a password smaller then 6 characters' do

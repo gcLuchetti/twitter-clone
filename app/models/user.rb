@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   has_many :tweets, dependent: :destroy
 
+  validates :username, uniqueness: { case_sensitive: false }, allow_blank: true
+
   after_create :send_welcome_email
 
   private
