@@ -1,15 +1,88 @@
-<h1>Logged in!</h1>
-<%= button_to("Log Out", destroy_user_session_path, method: :delete, class: "btn btn-warning" ) %>
+<div class="container py-2">
+  <div class="row">
+    <aside class="col side-navbar">
+      <%= link_to(root_path, class: 'd-flex align-items-center fs-5 px-3 mb-2') do %>
+        <div class="px-2 py-2 rounded-circle">
+          <%= image_tag('icons/twitter.png', height: '32', width: '33') %>
+        </div>
+      <% end %>
 
-<%= form_with model: Tweet.new, url: tweets_path, local: true do |t| %>
-  <%= t.text_field :body %>
-  <%= t.submit %>
-<% end %>
+      <%= link_to(root_path, class: 'd-flex align-items-center fs-5 mb-2') do %>
+        <div class="px-4 py-2 rounded-pill">
+          <span class="me-4 position-relative" style="bottom: 3px;">
+            <%= image_tag('icons/home.png', height: '32', width: '33') %>
+          </span>
+          <span>Home</span>
+        </div>
+      <% end %>
 
-<ul>
-  <%= Tweet.find_each do |tweet| %>
-    <li>
-      <%= tweet.body %>
-    </li>
-  <% end %>
-</ul>
+      <%= link_to(root_path, class: 'd-flex align-items-center fs-5 mb-2') do %>
+        <div class="px-4 py-2 rounded-pill">
+          <span class="me-4 position-relative" style="bottom: 3px;">
+            <%= image_tag('icons/explore.png', height: '32', width: '33') %>
+          </span>
+          <span>Explore</span>
+        </div>
+      <% end %>
+
+      <%= link_to(root_path, class: 'd-flex align-items-center fs-5 mb-2') do %>
+        <div class="px-4 py-2 rounded-pill">
+          <span class="me-4 position-relative" style="bottom: 3px;">
+            <%= image_tag('icons/notification.png', height: '32', width: '33') %>
+          </span>
+          <span>Notification</span>
+        </div>
+      <% end %>
+
+      <%= link_to(root_path, class: 'd-flex align-items-center fs-5 mb-2') do %>
+        <div class="px-4 py-2 rounded-pill">
+          <span class="me-4 position-relative" style="bottom: 3px;">
+            <%= image_tag('icons/message.png', height: '32', width: '33') %>
+          </span>
+          <span>Messages</span>
+        </div>
+      <% end %>
+
+      <%= link_to(root_path, class: 'd-flex align-items-center fs-5 mb-2') do %>
+        <div class="px-4 py-2 rounded-pill">
+          <span class="me-4 position-relative" style="bottom: 3px;">
+            <%= image_tag('icons/bookmark.png', height: '32', width: '33') %>
+          </span>
+          <span>Bookmarks</span>
+        </div>
+      <% end %>
+
+      <%= link_to(root_path, class: 'd-flex align-items-center fs-5 mb-2') do %>
+        <div class="px-4 py-2 rounded-pill">
+          <span class="me-4 position-relative" style="bottom: 3px;">
+            <%= image_tag('icons/profile.png', height: '32', width: '33') %>
+          </span>
+          <span>Profile</span>
+        </div>
+      <% end %>
+
+      <div class="d-flex align-items-center fs-4 mb-2 px-4">
+        <%= button_tag("Tweet", class: "btn btn-primary btn-lg rounded-pill") %>
+      </div>
+
+      <%= button_to("Log Out", destroy_user_session_path, method: :delete, class: "btn btn-warning" ) %>
+    </aside>
+
+    <div class="col">
+      <%= form_with model: Tweet.new, url: tweets_path, local: true do |t| %>
+        <%= t.text_field :body %>
+        <%= t.submit %>
+      <% end %>
+
+      <ul>
+        <%= Tweet.find_each do |tweet| %>
+          <li>
+            <%= tweet.body %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col">Col</div>
+  </div>
+</div>
