@@ -1,0 +1,18 @@
+.btn-tweet {
+  background-color: $twitter-blue;
+  color: $white;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $twitter-blue-dark;
+    color: $white;
+  }
+}
+
+.btn-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

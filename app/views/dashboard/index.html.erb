@@ -52,7 +52,7 @@
         </div>
       <% end %>
 
-      <%= link_to(root_path, class: 'd-flex align-items-center fs-5 mb-2') do %>
+      <%= link_to(root_path, class: 'd-flex align-items-center fs-5 mb-4') do %>
         <div class="px-4 py-2 rounded-pill">
           <span class="me-4 position-relative" style="bottom: 3px;">
             <%= image_tag('icons/profile.png', height: '32', width: '33') %>
@@ -61,14 +61,16 @@
         </div>
       <% end %>
 
-      <div class="d-flex align-items-center fs-4 mb-2 px-4">
-        <%= button_tag("Tweet", class: "btn btn-primary btn-lg rounded-pill") %>
+      <div class="d-flex align-items-center fs-4 mb-3 px-4">
+        <%= button_tag("Tweet", class: "btn btn-tweet w-100 btn-lg rounded-pill") %>
       </div>
 
-      <%= button_to("Log Out", destroy_user_session_path, method: :delete, class: "btn btn-warning" ) %>
+      <div class="d-flex align-items-center fs-5 px-4">
+        <%= button_to("Log Out", destroy_user_session_path, method: :delete, class: "btn btn-link") %>
+      </div>
     </aside>
 
-    <div class="col">
+    <div class="col-6">
       <%= form_with model: Tweet.new, url: tweets_path, local: true do |t| %>
         <%= t.text_field :body %>
         <%= t.submit %>
